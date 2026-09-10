@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday 🎂</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;background:#0b0b12;color:white;overflow-x:hidden}
+.container{width:min(92%,900px);margin:auto;padding:25px 0 60px}
+.hero{text-align:center;padding:35px 10px 25px}
+.tag{display:inline-block;background:#ff4fa3;color:#111;padding:8px 15px;border-radius:999px;font-weight:bold;transform:rotate(-3deg)}
+h1{font-size:clamp(42px,12vw,90px);line-height:.95;margin:20px 0;font-weight:900}
+h1 span{color:#ffd84d}
+.subtitle{font-size:18px;opacity:.85}
+.section-title{text-align:center;font-size:30px;margin:55px 0 20px}
+.photos{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.photo-card{background:white;color:#111;padding:10px 10px 18px;border-radius:4px;box-shadow:0 10px 25px #0008}
+.photo-card:nth-child(1){transform:rotate(-3deg)}
+.photo-card:nth-child(2){transform:rotate(2deg)}
+.photo-card:nth-child(3){transform:rotate(-2deg)}
+.photo-card:nth-child(4){transform:rotate(3deg)}
+.photo-card:nth-child(5){transform:rotate(-2deg);grid-column:1/-1;max-width:48%;justify-self:center}
+.photo-card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.photo-card p{text-align:center;font-weight:bold;font-size:15px;margin:12px 5px 0}
+.video-box{background:#171724;padding:12px;border-radius:20px;border:1px solid #34344b}
+video{
+    width:100%;
+    max-width:430px;
+    aspect-ratio:9/16;
+    object-fit:contain;
+    display:block;
+    margin:auto;
+    border-radius:13px;
+    background:#000;
+}
+audio{width:100%}
+.footer{text-align:center;margin-top:55px;font-size:18px}
+.emoji{font-size:35px}
+@media(max-width:600px){
+.container{padding-top:10px}
+.photos{gap:14px}
+.photo-card{padding:7px 7px 13px}
+.photo-card p{font-size:13px}
+.photo-card:nth-child(5){max-width:65%}
+}
+@media(max-width:380px){
+.photos{grid-template-columns:1fr}
+.photo-card:nth-child(5){grid-column:auto;max-width:100%}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<section class="hero">
+<div class="tag">JUST FOR YOU အထန်ကောင်လေး🌚</div>
+<h1>ဟက်ပီဘက်ဒေး အထန်ကောင်လေး<br><span>to You 🎂</span></h1>
+<p class="subtitle">Another year, another အထန် level unlocked. 🗣️🔥</p>
+</section>
+
+<h2 class="section-title">📸 The Birthday Dump</h2>
+<section class="photos">
+<div class="photo-card"><img src="assets/photo1.jpg" alt="Birthday photo 1"><p>ထန်နေတာ 🌚</p></div>
+<div class="photo-card"><img src="assets/photo2.jpg" alt="Birthday photo 2"><p>ပိုထန်တယ် 🌚</p></div>
+<div class="photo-card"><img src="assets/photo3.jpg" alt="Birthday photo 3"><p>အထန်နောက်ဆုံး အဆင့် 🔥</p></div>
+<div class="photo-card"><img src="assets/photo4.jpg" alt="Birthday photo 4"><p>ထန်ချက်ပဲ 🗿</p></div>
+<div class="photo-card"><img src="assets/photo5.jpg" alt="Birthday photo 5"><p>ထန်ပြီးအိပ်သွားတာ 🌚</p></div>
+</section>
+
+<h2 class="section-title">🎬 အထန်video</h2>
+<div class="video-box">
+<video controls playsinline>
+<source src="assets/video1.mp4" type="video/mp4">
+Your browser does not support video.
+</video>
+</div>
+
+<div class="footer">
+<div class="emoji">🌚 🌚 🌚</div>
+<p>Happy Birthday အထန်ကောင်လေး 🎉</p>
+</div>
+
+</div>
+
+<script>
+const song=document.getElementById("birthdaySong");
+document.addEventListener("click",function startMusic(){
+song.play().catch(()=>{});
+document.removeEventListener("click",startMusic);
+},{once:true});
+</script>
+</body>
+</html>
